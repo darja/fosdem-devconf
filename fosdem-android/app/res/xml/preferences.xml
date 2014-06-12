@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/settings_category_notifications" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="notifyPref"
+            android:summary="@string/settings_notifications_summary"
+            android:title="@string/settings_notifications_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="vibratePref"
+            android:summary="@string/settings_vibrate_title"
+            android:title="@string/settings_vibrate_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="ledPref"
+            android:summary="@string/settings_led_summary"
+            android:title="@string/settings_led_title" />
+        <EditTextPreference
+            android:defaultValue="10"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:key="delayPref"
+            android:maxLength="3"
+            android:summary="@string/settings_notificationtime_summary"
+            android:title="@string/settings_notificationtime_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_favorites" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="upcomingPref"
+            android:summary="@string/settings_favupcoming_summary"
+            android:title="@string/settings_favupcoming_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

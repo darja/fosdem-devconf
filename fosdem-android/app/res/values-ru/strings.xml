@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">DevConf 2014</string>
+
+    <!-- action bar -->
+    <string name="menu_favorites">Избранное</string>
+    <string name="menu_search">Поиск</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_about">О программе</string>
+    <string name="menu_testing">Тестирование</string>
+    <string name="menu_update">Обновление</string>
+    <string name="menu_quit">Выход</string>
+    <string name="menu_share">Поделиться</string>
+
+    <!-- main view -->
+    <string name="main_saturday">Суббота, 14 июня</string>
+    <string name="main_sunday">Воскресенье, 15 июня</string>
+    <string name="main_favorites">Избранное</string>
+    <string name="main_search">Поиск</string>
+
+    <string name="search_label">Поиск</string>
+    <string name="settings_description">Поиск</string>
+    <string name="menu_test_display_event">Показать событие</string>
+    <string name="menu_prefetch_rooms">Prefetch Maps</string>
+    <string name="synchronize_button">Синхронизировать</string>
+    <string name="synchronize_title">Синхронизировать</string>
+    <string name="synchronize_description">Синхронизировать события</string>
+    <string name="db_ver">Последнее обновление:</string>
+    <string name="about_text1">Расписание DevConf 2014</string>
+    <string name="favorites">Избранное</string>
+    <string name="favorites_event_removed">Событие удалено из избранного</string>
+    <string name="favorites_event_added">Событие добавлено в избранное</string>
+    <string name="share">Поделиться</string>
+    <string name="updater_title">Что хотите обновить?</string>
+    <string-array name="updater_dialog_choices">
+        <item name="updater_dialog_choices_xml">Update schedule contents</item>
+        <item name="updater_dialog_choices_rooms">Preload room images</item>
+    </string-array>
+	<string name="cannot_update">Не получилось обновить события. Проверьте интернет-соединение</string>
+
+    <string name="downloading">Загрузка…</string>
+    <string name="done_fetching">События получены, записываем в БД</string>
+    <string name="done_loading">События загружены</string>
+   	<plurals name="fetched_events">
+        <item quantity="one">Загружено %1$d событие</item>
+        <item quantity="few">Загружены %1$d события</item>
+        <item quantity="many">Загружено %1$d событий</item>
+        <item quantity="other">Загружено %1$d событий</item>
+    </plurals>
+  	<plurals name="stored_events">
+        <item quantity="one">Добавлено %1$d событие</item>
+        <item quantity="few">Добавлены %1$d события</item>
+        <item quantity="many">Добавлено %1$d событий</item>
+        <item quantity="other">Добавлено %1$d событий</item>
+    </plurals>
+    		
+	<!-- event list -->
+    <string name="eventlist_header_saturday">Суббота, 14 июня</string>
+    <string name="eventlist_header_sunday">Воскресенье, 15 июня</string>
+
+    <!-- search -->
+    <string name="search_for">Поиск: %1$s</string>
+    
+    <!-- settings -->
+    <string name="settings_category_notifications">Оповещения</string>
+    <string name="settings_notifications_title">Включить оповещения</string>
+    <string name="settings_notifications_summary">Если включено, вы будете оповещены о наступающем событии</string>
+    <string name="settings_vibrate_title">Вибрация</string>
+    <string name="settings_vibrate_summary">Включить вибрацию для оповещений</string>
+    <string name="settings_led_title">Flash led</string>
+    <string name="settings_led_summary">Мигать красным при оповещении</string>
+    <string name="settings_notificationtime_title">Время оповещения (в минутах)</string>
+    <string name="settings_notificationtime_summary">За какое время до события должно срабатывать оповещения</string>
+    <string name="settings_category_favorites">Избранное</string>
+    <string name="settings_favupcoming_title">Показывать только предстоящие события</string>
+    <string name="settings_favupcoming_summary">Если включено, в списке отображаются только незавершённые события</string>
+</resources>
