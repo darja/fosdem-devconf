@@ -27,7 +27,6 @@
     <string name="synchronize_title">Синхронизировать</string>
     <string name="synchronize_description">Синхронизировать события</string>
     <string name="db_ver">Последнее обновление:</string>
-    <string name="about_text1">Расписание DevConf 2014</string>
     <string name="favorites">Избранное</string>
     <string name="favorites_event_removed">Событие удалено из избранного</string>
     <string name="favorites_event_added">Событие добавлено в избранное</string>

@@ -28,9 +28,9 @@
     <string name="synchronize_title">Synchronize</string>
     <string name="synchronize_description">Synchronizes the schedule with the one from FOSDEM online.\n\nYou need a connection to the Internet for this to work.</string>
     <string name="db_ver">Database last updated:</string>
-    <string name="about_text1">DevConf 2014 Schedule application</string>
-    <string name="about_text2">Based on FOSDEM schedule application\n\nProgrammed by:\nMichaël Uyttersprot, Pieter Iserbyt and Christophe Vandeplas. Contributors: Christopher Orr and Raphael Kallensee.</string>
-    <string name="about_text3">Licensed under GPL. Source available at https://github.com/rkallensee/fosdem-android. The FOSDEM logo and picture are licensed under a CC-BY-SA 2.0 Belgium License.</string>
+    <string name="about_text1">Based on FOSDEM schedule application\n\nProgrammed by:\nMichaël Uyttersprot, Pieter Iserbyt and Christophe Vandeplas. Contributors: Christopher Orr and Raphael Kallensee.</string>
+    <string name="about_text2">Adapted for DevConf by Darja Ryazhskikh</string>
+    <string name="about_text3">Licensed under GPL. Source available at https://github.com/darja/fosdem-devconf.</string>
     <string name="favorites">Favorites</string>
     <string name="favorites_event_removed">Event removed from favorites</string>
     <string name="favorites_event_added">Event added to favorites</string>
