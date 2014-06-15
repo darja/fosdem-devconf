@@ -244,17 +244,8 @@ public class DisplayEvent extends SherlockActivity {
 	public void share() {
 		final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
 		intent.setType("text/plain");
-		String extra = "Я собираюсь посетить \"" + event.getTitle() + "\" (День "
-				+ (event.getDayindex()) + ", "
-				+ String.format("%02d", event.getStart().getHours()) + ":"
-				+ String.format("%02d", event.getStart().getMinutes()) + " @ " + event.getRoom()
-				+ ") #devconf";
-		long currentTime = Calendar.getInstance().getTimeInMillis();
-		if (currentTime >= event.getStart().getTime()
-				&& currentTime <= (event.getStart().getTime() + ((event
-						.getDuration() + 10) * 60 * 1000)))
-			extra = "Я слушаю '" + event.getTitle() + "' ("
-					+ event.getRoom() + ") #devconf";
+		String extra = "Я иду на Devconf 2014 \"" + event.getTitle() + 
+				"\" http://devconf.ru/offers/" + event.getId() + " #devconf";
 		intent.putExtra(Intent.EXTRA_TEXT, extra);
 		startActivity(Intent.createChooser(intent, getString(R.string.share)));
 	}
