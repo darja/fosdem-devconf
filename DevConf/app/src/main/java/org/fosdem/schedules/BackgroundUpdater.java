@@ -3,7 +3,7 @@ package org.fosdem.schedules;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.exceptions.ParserException;
 import org.fosdem.listeners.ParserEventListener;
 import org.fosdem.parsers.ScheduleParser;
@@ -77,7 +77,7 @@ public class BackgroundUpdater implements Runnable {
 		sendMessage(Main.DONEFETCHING);
 
 		// Persist
-		final DBAdapter db = new DBAdapter(context);
+		final DevConfDBAdapter db = new DevConfDBAdapter(context);
 		db.open();
 		try {
 			db.persistSchedule(s, handler);
@@ -97,7 +97,7 @@ public class BackgroundUpdater implements Runnable {
 
 		// get the list of the rooms
 		final String[] rooms;
-		final DBAdapter db = new DBAdapter(context);
+		final DevConfDBAdapter db = new DevConfDBAdapter(context);
 		db.open();
 		try {
 			rooms = db.getRooms();

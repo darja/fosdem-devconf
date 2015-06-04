@@ -13,7 +13,7 @@ import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import org.fosdem.broadcast.FavoritesBroadcast;
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.devconf.R;
 import org.fosdem.pojo.Event;
 import org.fosdem.pojo.Track;
@@ -177,7 +177,7 @@ public class EventListActivity extends SherlockActivity  implements OnScrollList
 		}
 
 		// Load event with specified id from the db
-		final DBAdapter db = new DBAdapter(this);
+		final DevConfDBAdapter db = new DevConfDBAdapter(this);
 		try {
 			db.open();
 
@@ -206,7 +206,7 @@ public class EventListActivity extends SherlockActivity  implements OnScrollList
 	private ArrayList<Track> getTracks(int dayIndex) {
 		// Load track list with specified day index from db
 		// TODO: this was partly duplicated from TrackListActivity and should get refactored.
-		final DBAdapter db = new DBAdapter(this);
+		final DevConfDBAdapter db = new DevConfDBAdapter(this);
 		try {
 			db.open();
 			String[] trackNames = db.getTracksByDayIndex(dayIndex);

@@ -24,7 +24,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import org.fosdem.broadcast.FavoritesBroadcast;
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.devconf.R;
 import org.fosdem.listeners.ParserEventListener;
 import org.fosdem.util.StringUtil;
@@ -128,7 +128,7 @@ public class Main extends SherlockActivity implements ParserEventListener, OnCli
 		tvDbVer.setText(getString(R.string.db_ver) + " "
 				+ StringUtil.dateTimeToString(getDBLastUpdated()));
 
-		DBAdapter dbAdapter = new DBAdapter(this);
+		DevConfDBAdapter dbAdapter = new DevConfDBAdapter(this);
 		long count = 0;
 		try {
 			dbAdapter.open();
@@ -260,7 +260,7 @@ public class Main extends SherlockActivity implements ParserEventListener, OnCli
 				tvProgress.setText(getString(R.string.downloading));
 				tvProgress.setVisibility(View.VISIBLE);
 				break;
-			case DBAdapter.MSG_EVENT_STORED:
+			case DevConfDBAdapter.MSG_EVENT_STORED:
 				tvProgress.setText(getResources().getQuantityString(R.plurals.stored_events, counter, counter));
 				tvProgress.setVisibility(View.VISIBLE);
 				break;
@@ -276,7 +276,7 @@ public class Main extends SherlockActivity implements ParserEventListener, OnCli
 				toast(doneDb);
 				tvDbVer.setText(getString(R.string.db_ver) + " "
 						+ StringUtil.dateTimeToString(getDBLastUpdated()));
-				DBAdapter db = new DBAdapter(Main.this);
+				DevConfDBAdapter db = new DevConfDBAdapter(Main.this);
 				db.open();
 				try {
 					long count = db.getEventCount();

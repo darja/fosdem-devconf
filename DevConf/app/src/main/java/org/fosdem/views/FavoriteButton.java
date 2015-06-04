@@ -1,7 +1,7 @@
 package org.fosdem.views;
 
 import org.fosdem.devconf.R;
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.pojo.Event;
 import org.fosdem.util.UIUtil;
 
@@ -46,7 +46,7 @@ public class FavoriteButton extends ImageView implements OnClickListener {
 		//this.setLayoutParams(UIUtil.WRAPPED);
 		Log.v(getClass().getName(),"Initialize");
 
-		DBAdapter adapter = new DBAdapter(getContext());
+		DevConfDBAdapter adapter = new DevConfDBAdapter(getContext());
 		adapter.open();
 		isFavorite = adapter.isFavorite(event);
 		Log.v(getClass().getName(),isFavorite?"Is a favorite":"Isn't a favorite");
@@ -66,7 +66,7 @@ public class FavoriteButton extends ImageView implements OnClickListener {
 
 	public void onClick(View v) {
 
-		DBAdapter db = new DBAdapter(getContext());
+		DevConfDBAdapter db = new DevConfDBAdapter(getContext());
 		db.open();
 		if (isFavorite) {
 			// Unmark

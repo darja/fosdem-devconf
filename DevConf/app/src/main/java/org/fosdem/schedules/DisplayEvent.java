@@ -17,7 +17,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import org.fosdem.broadcast.FavoritesBroadcast;
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.devconf.R;
 import org.fosdem.pojo.Event;
 import org.fosdem.util.FileUtil;
@@ -58,7 +58,7 @@ public class DisplayEvent extends SherlockActivity {
 		// Get the event from the intent
 		event = getEvent();
 
-		DBAdapter adapter = new DBAdapter(getBaseContext());
+		DevConfDBAdapter adapter = new DevConfDBAdapter(getBaseContext());
 		adapter.open();
 		isFavorite = adapter.isFavorite(event);
 		Log.v(getClass().getName(),isFavorite?"Is a favorite":"Isn't a favorite");
@@ -123,7 +123,7 @@ public class DisplayEvent extends SherlockActivity {
 		final int id = (Integer) extras.get(ID);
 
 		// Load event with specified id from the db
-		final DBAdapter db = new DBAdapter(this);
+		final DevConfDBAdapter db = new DevConfDBAdapter(this);
 		try {
 			db.open();
 			return db.getEventById(id);
@@ -272,7 +272,7 @@ public class DisplayEvent extends SherlockActivity {
 	private void toggleFavoriteStatus(MenuItem menuItem) {
 		// TODO: this was extracted from org.fosdem.views.FavoriteButton
 		// and shouldn't necessarily be here.
-		DBAdapter db = new DBAdapter(getBaseContext());
+		DevConfDBAdapter db = new DevConfDBAdapter(getBaseContext());
 		db.open();
 		if (isFavorite) {
 			// Unmark

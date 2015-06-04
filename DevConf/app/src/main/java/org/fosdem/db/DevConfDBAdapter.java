@@ -1,22 +1,6 @@
 package org.fosdem.db;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.fosdem.broadcast.FavoritesBroadcast;
-import org.fosdem.pojo.Day;
-import org.fosdem.pojo.Event;
-import org.fosdem.pojo.Person;
-import org.fosdem.pojo.Room;
-import org.fosdem.pojo.Schedule;
-
-import android.content.ContentProvider;
-import android.content.ContentUris;
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
-import android.content.UriMatcher;
+import android.content.*;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,17 +10,23 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import org.fosdem.broadcast.FavoritesBroadcast;
+import org.fosdem.pojo.*;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /*
  * This class can either be used as a content provider or as a standalone DBAdapter.
  */
-public class DBAdapter extends ContentProvider {
+public class DevConfDBAdapter extends ContentProvider {
 
 	// Message related
 	public static final int MSG_EVENT_STORED = 100;
 
 	// Provider related
-	public static final String PROVIDER_NAME = "org.fosdem.pojo.Event";
+	public static final String PROVIDER_NAME = "org.fosdem.pojo.DCEvent";
 	public static final Uri CONTENT_URI = Uri.parse("content://"
 			+ PROVIDER_NAME + "/events");
 
@@ -177,11 +167,11 @@ public class DBAdapter extends ContentProvider {
 	protected Context context;
 	protected SQLiteDatabase db;
 
-	public DBAdapter() {
+	public DevConfDBAdapter() {
 		super();
 	}
 
-	public DBAdapter(Context context) {
+	public DevConfDBAdapter(Context context) {
 		this.context = context;
 		dbHelper = new DatabaseHelper(context);
 	}
@@ -213,7 +203,7 @@ public class DBAdapter extends ContentProvider {
 		}
 	}
 
-	public DBAdapter open() throws SQLException {
+	public DevConfDBAdapter open() throws SQLException {
 		db = dbHelper.getWritableDatabase();
 		return this;
 	}

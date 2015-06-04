@@ -79,12 +79,12 @@
             </intent-filter>
         </receiver>
 
-        <provider android:name="org.fosdem.db.DBAdapter" android:authorities="org.fosdem.pojo.Event"/>
+        <provider android:name="org.fosdem.db.DevConfDBAdapter" android:authorities="org.fosdem.pojo.DCEvent" android:exported="false"/>
 
         <!-- Provides search suggestions for words and their definitions. -->
-        <provider android:name="org.fosdem.providers.SearchProvider"
-            android:authorities="fosdemsearch"
-            android:syncable="false" />
+        <provider android:name="org.fosdem.providers.DevConfSearchProvider"
+            android:authorities="devconfsearch"
+            android:syncable="false" android:exported="false"/>
     </application>
 
 </manifest>

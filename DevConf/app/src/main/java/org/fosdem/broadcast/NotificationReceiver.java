@@ -1,17 +1,5 @@
 package org.fosdem.broadcast;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.fosdem.devconf.R;
-import org.fosdem.db.DBAdapter;
-import org.fosdem.pojo.Event;
-import org.fosdem.schedules.DisplayEvent;
-import org.fosdem.schedules.Main;
-import org.fosdem.schedules.Preferences;
-import org.fosdem.util.StringUtil;
-
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -22,6 +10,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.util.Log;
+import org.fosdem.db.DevConfDBAdapter;
+import org.fosdem.devconf.R;
+import org.fosdem.pojo.Event;
+import org.fosdem.schedules.DisplayEvent;
+import org.fosdem.schedules.Main;
+import org.fosdem.schedules.Preferences;
+import org.fosdem.util.StringUtil;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class NotificationReceiver extends BroadcastReceiver {
 
@@ -131,7 +129,7 @@ public class NotificationReceiver extends BroadcastReceiver {
 		SharedPreferences prefs = mContext.getSharedPreferences(Main.PREFS, Context.MODE_PRIVATE);
 		int delayMins = prefs.getInt(Preferences.PREF_DELAY, 10);
 		
-		DBAdapter db = new DBAdapter(mContext);
+		DevConfDBAdapter db = new DevConfDBAdapter(mContext);
 		db.open();
 
 		ArrayList<Event> events = db.getFavoriteEvents(new Date());
@@ -185,7 +183,7 @@ public class NotificationReceiver extends BroadcastReceiver {
 	}
 	
 	private Event getEventById(long eventId) {
-		DBAdapter db = new DBAdapter(mContext);
+		DevConfDBAdapter db = new DevConfDBAdapter(mContext);
 		db.open();
 		Event event = db.getEventById((int) eventId);
 		db.close();

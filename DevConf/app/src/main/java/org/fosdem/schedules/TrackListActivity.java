@@ -3,7 +3,7 @@ package org.fosdem.schedules;
 import java.util.ArrayList;
 
 import org.fosdem.devconf.R;
-import org.fosdem.db.DBAdapter;
+import org.fosdem.db.DevConfDBAdapter;
 import org.fosdem.pojo.Track;
 import org.fosdem.util.TrackAdapter;
 
@@ -94,7 +94,7 @@ public class TrackListActivity extends SherlockListActivity implements OnNavigat
 		}
 
 		// Load track list with specified day index from db
-		final DBAdapter db = new DBAdapter(this);
+		final DevConfDBAdapter db = new DevConfDBAdapter(this);
 		try {
 			db.open();
 			String[] trackNames = db.getTracksByDayIndex(dayIndex);
