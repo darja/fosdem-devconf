@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="tracklist_spinneractions">
-        <item>Суббота, 14 июня</item>
-        <item>Воскресенье, 15 июня</item>
+        <item>Пятница, 19 июня</item>
+        <item>Суббота, 20 июня</item>
     </string-array>
 </resources>

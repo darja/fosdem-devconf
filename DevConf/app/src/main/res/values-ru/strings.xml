@@ -15,7 +15,7 @@
 
     <!-- main view -->
     <string name="main_saturday">Пятница, 19 июня</string>
-    <string name="main_sunday">Ещё какой-нибудь день</string>
+    <string name="main_sunday">Суббота, 20 июня</string>
     <string name="main_favorites">Избранное</string>
     <string name="main_search">Поиск</string>
 
@@ -55,8 +55,8 @@
     </plurals>
     		
 	<!-- event list -->
-    <string name="eventlist_header_saturday">Суббота, 14 июня</string>
-    <string name="eventlist_header_sunday">Воскресенье, 15 июня</string>
+    <string name="eventlist_header_saturday">Пятница, 19 июня</string>
+    <string name="eventlist_header_sunday">Суббота, 20 июня</string>
 
     <!-- search -->
     <string name="search_for">Поиск: %1$s</string>
