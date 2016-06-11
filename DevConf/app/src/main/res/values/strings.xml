@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="app_name">DevConf 2015</string>
+    <string name="app_name">DevConf 2016</string>
 
     <!-- action bar -->
     <string name="menu_favorites">Favorites</string>
@@ -14,26 +14,26 @@
     <string name="menu_share">Share</string>
 
     <!-- main view -->
-    <string name="main_saturday">Saturday</string>
-    <string name="main_sunday">Sunday</string>
+    <string name="main_saturday">Friday, 17 June</string>
+    <string name="main_sunday">Saturday, 18 June</string>
     <string name="main_favorites">Favorites</string>
     <string name="main_search">Search</string>
 
     <string name="search_label">Search</string>
-    <string name="settings_description">FOSDEM search</string>
+    <string name="settings_description">Settings</string>
     <string name="menu_test_display_event">Display event</string>
     <string name="menu_prefetch_rooms">Prefetch Maps</string>
     <string name="synchronize_button">Synchronize</string>
     <string name="synchronize_title">Synchronize</string>
-    <string name="synchronize_description">Synchronizes the schedule with the one from FOSDEM online.\n\nYou need a connection to the Internet for this to work.</string>
+    <string name="synchronize_description">Synchronizes the schedule with the one from DevConf online.\n\nYou need a connection to the Internet for this to work.</string>
     <string name="db_ver">Database last updated:</string>
-    <string name="about_text1">Based on FOSDEM schedule application\n\nProgrammed by:\nMichaël Uyttersprot, Pieter Iserbyt and Christophe Vandeplas. Contributors: Christopher Orr and Raphael Kallensee.</string>
-    <string name="about_text2">Adapted for DevConf by Darja Ryazhskikh</string>
-    <string name="about_text3">Licensed under GPL. Source available at https://github.com/darja/fosdem-devconf.</string>
+    <string name="about_text1" translatable="false">Based on FOSDEM schedule application\n\nProgrammed by:\nMichaël Uyttersprot, Pieter Iserbyt and Christophe Vandeplas. Contributors: Christopher Orr and Raphael Kallensee.</string>
+    <string name="about_text2" translatable="false">Adapted for DevConf by Darja Ryazhskikh</string>
+    <string name="about_text3" translatable="false">Licensed under GPL. Source available at https://github.com/darja/fosdem-devconf.</string>
     <string name="favorites">Favorites</string>
     <string name="favorites_event_removed">Event removed from favorites</string>
     <string name="favorites_event_added">Event added to favorites</string>
-    <string name="share">Share...</string>
+    <string name="share">Share…</string>
     <string name="updater_title">What do you want to update?</string>
     <string-array name="updater_dialog_choices">
         <item name="updater_dialog_choices_xml">Update schedule contents</item>
@@ -52,10 +52,6 @@
         <item quantity="one">Stored %1$d event</item>
         <item quantity="other">Stored %1$d events</item>
     </plurals>
-    
-    <!-- event list -->
-    <string name="eventlist_header_saturday">Saturday, June 14th</string>
-    <string name="eventlist_header_sunday">Sunday, June 15th</string>
 
     <!-- search -->
     <string name="search_for">Search for: %1$s</string>

@@ -79,10 +79,10 @@ public class EventAdapter extends ArrayAdapter<Event> implements StickyListHeade
 		String headerText = "";
 		switch (event.getDayindex()) {
 		case 1:
-			headerText = context.getString(R.string.eventlist_header_saturday);
+			headerText = context.getString(R.string.main_saturday);
 			break;
 		case 2:
-			headerText = context.getString(R.string.eventlist_header_sunday);
+			headerText = context.getString(R.string.main_sunday);
 			break;
 		default:
 			headerText = "Day (unknown)";

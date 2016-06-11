@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="app_name">DevConf 2015</string>
+    <string name="app_name">DevConf 2016</string>
 
     <!-- action bar -->
     <string name="menu_favorites">Избранное</string>
@@ -14,8 +14,8 @@
     <string name="menu_share">Поделиться</string>
 
     <!-- main view -->
-    <string name="main_saturday">Пятница, 19 июня</string>
-    <string name="main_sunday">Суббота, 20 июня</string>
+    <string name="main_saturday">Пятница, 17 июня</string>
+    <string name="main_sunday">Суббота, 18 июня</string>
     <string name="main_favorites">Избранное</string>
     <string name="main_search">Поиск</string>
 
@@ -54,10 +54,6 @@
         <item quantity="other">Добавлено %1$d событий</item>
     </plurals>
     		
-	<!-- event list -->
-    <string name="eventlist_header_saturday">Пятница, 19 июня</string>
-    <string name="eventlist_header_sunday">Суббота, 20 июня</string>
-
     <!-- search -->
     <string name="search_for">Поиск: %1$s</string>
     
