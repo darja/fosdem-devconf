@@ -1,18 +1,37 @@
 apply plugin: 'com.android.application'
 
+def appVersionName = '1.0'
+def appVersionCode = 3
+
 android {
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../../cert/devconf.jks")
+            storePassword "lightoff"
+            keyAlias "devconf"
+            keyPassword "lightoff"
+        }
+    }
+
+    archivesBaseName="DevConf2016-${appVersionName}-${appVersionCode}"
 
     defaultConfig {
         applicationId "org.fosdem.devconf2015"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        versionCode appVersionCode
+        versionName appVersionName
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
