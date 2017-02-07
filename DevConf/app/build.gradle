@@ -20,7 +20,7 @@ android {
         }
     }
 
-    archivesBaseName="DevConf2016-${appVersionName}-${appVersionCode}"
+    archivesBaseName="DevConf-${appVersionName}-${appVersionCode}"
 
     defaultConfig {
         applicationId "org.fosdem.devconf2015"
