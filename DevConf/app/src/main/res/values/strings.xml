@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="app_name">DevConf 2016</string>
+    <string name="app_name">DevConf</string>
 
     <!-- action bar -->
     <string name="menu_favorites">Favorites</string>
