@@ -5,7 +5,7 @@ def appVersionCode = 4
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    buildToolsVersion '25.0.2'
 
     lintOptions {
         abortOnError false
